@@ -13,11 +13,16 @@
 <body>
 	<form action="/casadocodigo/produtos" method="post">
 		<div>
-			<label>Título</label> <input type="text" name="titulo" />
+			<label>Título</label> 
+			<input type="text" name="titulo" />
 		</div>
 		<div>
 			<label>Descrição</label>
 			<textarea rows="10" cols="20" name="descricao"></textarea>
+		</div>
+		<div>
+			<label>Páginas</label>
+			<input type="number" name="paginas" />
 		</div>
 		<c:forEach items="${tipos}" var="tipoPreco" varStatus="status">
 			<div>
