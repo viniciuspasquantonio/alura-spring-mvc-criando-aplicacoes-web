@@ -21,6 +21,9 @@ public class Produto {
 	private int paginas;
 	@DateTimeFormat
 	private Calendar dataLancamento;
+	private String sumarioPath;
+
+	
 
 	public Calendar getDataLancamento() {
 		return dataLancamento;
@@ -75,5 +78,12 @@ public class Produto {
 	
 	public void setPrecos(List<Preco> precos) {
 		this.precos = precos;
+	}
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
 	}
 }

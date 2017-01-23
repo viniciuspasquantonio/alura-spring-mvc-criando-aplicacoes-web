@@ -13,14 +13,14 @@
 	Casa do Código</title>
 </head>
 <body>
-	<form:form action="${ s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto">
+	<form:form action="${ s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto" enctype="multipart/form-data">
 	    <div>
 	        <label>Título</label> 
 	        <form:input path="titulo" />
 	        <form:errors path="titulo" />
 	    </div>
 	    <div>
-	        <label>descricao</label>
+	        <label>Descrição</label>
 	        <form:textarea rows="10" cols="20" path="descricao" />
 	        <form:errors path="descricao" />
 	    </div>
@@ -41,7 +41,12 @@
 	            <form:hidden path="precos[${status.index}].tipo" value="${tipoPreco}" />
 	        </div>
 	    </c:forEach>
-	    <button type="submit">Cadastrar</button>
+	
+	    <div>
+	        <label>Sumário</label>
+	        <input name="sumario" type="file" />
+	    </div>
+    	<button type="submit">Cadastrar</button>
 	</form:form>
 </body>
 </html>
